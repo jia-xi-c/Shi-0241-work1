@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建你的衣橱</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft Yahei", sans-serif;
+        }
+        body{
+            background-color: #ffe8f0;
+            padding:30px;
+            color:#883355;
+        }
+        h1{
+            text-align:center;
+            color:#d86b94;
+            margin-bottom:30px;
+            letter-spacing:2px;
+        }
+        .container{
+            max-width:900px;
+            margin:0 auto;
+            background:#fff0f6;
+            padding:25px;
+            border-radius:20px;
+            box-shadow: 0 4px 12px #f8c8da;
+        }
+        table{
+            width:100%;
+            border-collapse: separate;
+            border-spacing:8px;
+        }
+        td,th{
+            background:#ffffff;
+            border-radius:14px;
+            padding:12px;
+            text-align:center;
+            border:2px solid #f7c6d9;
+            min-height:70px;
+            vertical-align:middle;
+        }
+        th{
+            background:#f9d2e2;
+            font-weight:bold;
+        }
+        select{
+            padding:8px 12px;
+            border-radius:10px;
+            border:2px solid #f2b8d0;
+            background:#fff;
+            color:#883355;
+            font-size:15px;
+        }
+        .add-btn{
+            margin-top:6px;
+            background:#f8a8c5;
+            color:white;
+            border:none;
+            width:32px;
+            height:32px;
+            border-radius:50%;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.2s;
+        }
+        .add-btn:hover{
+            background:#ec87ad;
+        }
+        .tip{
+            margin-top:20px;
+            text-align:center;
+            font-size:14px;
+            color:#b86486;
+        }
+    </style>
+</head>
+<body>
+    <h1>♡ 创建你的衣橱 ♡</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>淡色系</th>
+                    <th>深色系</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>上衣</td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+                <tr>
+                    <td>下裙</td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+                <tr>
+                    <td>下裤</td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+                <tr>
+                    <td>连衣裙</td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+                <tr>
+                    <td>外套</td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        配饰
+                        <br>
+                        <select>
+                            <option>颈饰</option>
+                            <option>手饰</option>
+                            <option>腰饰</option>
+                            <option>脚饰</option>
+                            <option>耳饰</option>
+                        </select>
+                    </td>
+                    <td><button class="add-btn">+</button></td>
+                    <td><button class="add-btn">+</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="tip">⊕ 点击 + 可以添加照片（现在是样式版，可后续加上传功能）</div>
+    </div>
+
+<script>
+// 简单点击弹窗（演示添加效果）
+const btns=document.querySelectorAll('.add-btn');
+btns.forEach(btn=>{
+    btn.onclick=()=>alert('打开添加图片区域');
+})
+</script>
+</body>
+</html>
